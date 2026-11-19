@@ -1,16 +1,15 @@
-void main(){
-  String text='Maaartinn';
-  List duplicateElements=[];
-  
-  for(var i=0; i<text.length; i++){
-    List repeatedElements=[];
-    for (var j = i+1; j < text.length; j++) {
-      if (text[i]==text[j]) {
-        repeatedElements.add(text[i]);
+void main() {
+  String text = 'maratninkm';
+
+  List<String> duplicateElements = [];
+
+  for (var i = 0; i < text.length; i++) {
+    for (var j = 0; j < i; j++) {
+      if (text[i] == text[j] && !duplicateElements.contains(text[i])) {
+        duplicateElements.add(text[i]);
       }
     }
-
-    duplicateElements.add(repeatedElements);
   }
+
   print(duplicateElements);
 }
